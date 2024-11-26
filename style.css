@@ -1,0 +1,198 @@
+
+
+*{
+
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    
+
+    
+}
+
+body{
+
+    overflow: hidden;
+    
+
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.entete{
+display: flex;
+width: 100%;
+height: 80px;
+line-height: 80px;
+justify-content: space-around;
+z-index: 111;
+}
+
+.logo {
+    display: flex;
+    font-family: "Outfit", sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color:rgb(0, 153, 255);
+}
+
+.menu{
+    display: flex;
+}
+.menu li{
+    margin: 0 15px;
+    
+}
+
+.menu li a{
+    font-size: 25px;
+    font-family:"Outfit", sans-serif;
+    color: rgb(0, 0, 0);
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+
+.reseaux a{
+    font-size:30px;
+    color: rgb(0, 0, 0);
+    margin: 25px 10px;
+}
+
+.menu li:hover a, .reseaux a:hover{
+    color: rgb(0, 153, 255);
+}
+
+.corps{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.cgauche, .cdroite{
+    width: 50%;
+}/*textB*/
+
+.cgauche{
+    z-index: 5;
+}
+.textB{
+    display: block;
+    position: relative;
+    font-family: "Outfit", sans-serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.textB::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px; 
+    bottom: 10px;
+    background-color: rgb(0, 153, 255);
+}
+
+h1 {
+display: block;
+font-family:"Outfit", sans-serif;
+font-size: 3em;
+font-weight: 900;
+color: rgb(0, 153, 255);
+}
+
+p {
+    display: block;
+    font-family: "Outfit", sans-serif;
+    width: 90%;
+    font-size: 1.2em;
+    text-align: justify;
+    
+
+}
+
+.btn2{
+    width: 100%;
+    position:relative;
+    left: 50px;
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: grey;
+    color: white;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+}
+button:hover{
+    background-color:rgb(0, 153, 255);
+}
+.groupImg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.groupImg{
+     width: calc(105%);
+    height: 100%;
+    right: -45px;
+    top: 5px;
+    animation: animateImg 5s linear infinite;
+
+}
+
+/*Animation pour le splash et la photo*/
+
+@keyframes animateImg{
+    50%{
+        right: 10px;
+        top: 25px;
+    }
+}
+
+.groupImg #idspl{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: saturate(100%);
+    width: 70%;
+    animation: animateSplash 15s linear infinite;
+
+}
+
+
+@keyframes animateSplash{
+    50%{
+        right: 37%;
+        top: 80%;
+        width: 80%;
+    }
+}
+
+
+
