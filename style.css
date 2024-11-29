@@ -195,7 +195,7 @@ button:hover{
     }
 }
 
-/*Petit cercle bleu*/
+/*Grand cercle bleu*/
 .corps::before{
     position:absolute;
     content: '';
@@ -214,6 +214,7 @@ button:hover{
     }
 }
 
+/*Création petit cercle bleu*/ 
 .corps::after {
     position: absolute;
     content: '';
@@ -235,4 +236,9 @@ button:hover{
 
 #textDefile {
     color: black;
+}
+
+
+.cv{
+    color: white;
 }
