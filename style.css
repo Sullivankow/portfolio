@@ -131,6 +131,7 @@ p {
     width: 100%;
     position:relative;
     left: 50px;
+    display: flex;
 }
 
 button{
@@ -178,7 +179,7 @@ button:hover{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -60%);
     filter: saturate(100%);
     width: 70%;
     animation: animateSplash 15s linear infinite;
@@ -194,5 +195,44 @@ button:hover{
     }
 }
 
+/*Petit cercle bleu*/
+.corps::before{
+    position:absolute;
+    content: '';
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, blue, pink);
+    left: -15%;
+    top: 40%;
+    animation: beforeAnime 10s linear infinite;
+}
+@keyframes beforeAnime{
+    50%{
+        left: -13%;
+        top: 41%;
+    }
+}
+
+.corps::after {
+    position: absolute;
+    content: '';
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, blue, pink);
+    left: 35%;
+    top: 15%;
+    animation: afterAnime 6s linear infinite;
+}
+@keyframes afterAnime{
+    50%{
+        left: 27%;
+        top: 10%;
+    }
+}
 
 
+#textDefile {
+    color: black;
+}
