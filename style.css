@@ -1,4 +1,8 @@
 
+html {
+    height: auto;
+    overflow: auto;
+}
 
 *{
 
@@ -23,6 +27,7 @@ body{
     width: 100%;
     min-height: 100vh;
     background-color: white;
+    padding-bottom: 70px;
 }
 
 .entete{
@@ -257,7 +262,7 @@ button:hover{
 }
 
 .headerComp {
-    background: #333;
+    background: linear-gradient(45deg, pink, blue);
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -289,11 +294,98 @@ button:hover{
 }
 
 .progress {
-    background: #76c7c0;
+    background: linear-gradient(45deg, pink, blue);
     height: 100%;
     transition: width 0.5s ease-in-out;
 }
 
 .skill:hover .progress {
-    background: #4da6a4;
+    background: rgb(0, 153, 255);
+}
+
+.titleComp{
+    color: white;
+}
+
+
+
+
+
+
+/*PAGE A PROPOS DE MOI*/
+
+.bodyAbout{
+    
+        height: auto;
+        overflow: visible;
+        
+    }
+
+.containerAbout {
+    
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.about {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about .imgMoi {
+    max-width: 150px;
+    border-radius: 50%;
+    margin: 10px auto;
+    display: block;
+}
+
+.about .titleAbout2 {
+    color: black;
+    text-align: center;
+}
+
+.about .pAbout{
+    margin: 10px 0;
+}
+
+.skillsAbout {
+    margin: 20px 0;
+}
+
+.skillsAbout .titleAbout3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.skillsAbout ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skillsAbout ul li {
+    background: #e8f1ff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta a {
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.cta a:hover {
+    background: #0056b3;
 }

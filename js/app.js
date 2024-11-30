@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const routes = {
         home: 'pages/home.html',
         about: 'pages/about.html',
-        competences: 'pages/competences.html',
+        competences: 'pages/competence.html',
         projects: 'pages/projects.html',
     };
 
