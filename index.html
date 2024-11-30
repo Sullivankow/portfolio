@@ -6,89 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/7084e7a941.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>SunDev Portfolio</title>
 </head>
 
 <body>
-
-
     <div class="container">
-
-
         <nav class="entete">
-
             <div class="logo"><span>Sun</span>Dev</div>
             <div class="menu">
-
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Mes compétences</a></li>
-                <li><a href="#">Mes projets</a></li>
-
+                <li><a href="#home" class="nav-link">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#competences" class="nav-link">Mes compétences</a></li>
+                <li><a href="#projects" class="nav-link">Mes projets</a></li>
             </div>
-
-            <!-- Mettre les icones de réseaux avec font awesome-->
             <div class="reseaux">
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
                 <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
             </div>
         </nav>
-
-        <div class="corps">
-
-
-            <div class="cgauche">
-                <span class="textB">Salut</span>
-                <h1>Je suis <span id="textDefile"></span></h1>
-                <p>Développeur Full Stack</p>
-
-                <div class="btn2">
-                    <button><a class="cv" href="asset/cv/CV DEV FULLSTACK 2025 (1).pdf" download="Mon-CV.pdf">Télécharger CV</a></button>
-                    <button>Prêt</button>
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="cdroite"></div>
-            <div class="groupImg">
-
-                <img class="splash" src="images/Daco_4096693.png" weight="750px" height="750px">
-                <!-- <img class="moi" src="images/moi.png" id="idspl" weight="250px" height="850px"> -->
-
-
-            </div>
+        <div id="app">
+            <!-- Le contenu des pages sera chargé ici -->
         </div>
-
-
-
-
-
     </div>
+    <script src="js/app.js"></script>
 
 
-<!-- Load library from the CDN -->
+   <!-- Load library from the CDN -->
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-  <!-- Animation d'écriture -->
-  <script>
-    let typed = new Typed('#textDefile', {
-      strings: ['Développeur Full Stack'],
-      loop:1,
-       startDelay: 100,
-       backSpeed: 100,
-      typeSpeed: 50,
-     
-    });
-  </script>
-
 
 </body>
 

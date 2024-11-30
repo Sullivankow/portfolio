@@ -242,3 +242,58 @@ button:hover{
 .cv{
     color: white;
 }
+
+
+
+
+/*PAGE MES COMPETENCES*/
+
+.bodyComp {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+    color: #333;
+}
+
+.headerComp {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.mainComp {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.titleComp {
+    text-align: center;
+}
+
+.skill {
+    margin: 1rem 0;
+}
+
+.skill .title3 {
+    margin: 0 0 0.5rem;
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress {
+    background: #76c7c0;
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+}
+
+.skill:hover .progress {
+    background: #4da6a4;
+}
