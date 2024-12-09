@@ -89,6 +89,9 @@ z-index: 111;
     padding: 0 10%;
     overflow: hidden;
 }
+.ulHome {
+    display: flex;
+}
 
 .cgauche, .cdroite{
     width: 50%;
@@ -156,13 +159,10 @@ button{
 button:hover{
     background-color:rgb(0, 153, 255);
 }
-.groupImg{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
+
 
 .groupImg{
+    position: relative;
      width: calc(105%);
     height: 100%;
     right: -45px;
@@ -276,6 +276,7 @@ button:hover{
 
 .titleComp {
     text-align: center;
+    color: white;
 }
 
 .skill {
@@ -284,6 +285,7 @@ button:hover{
 
 .skill .title3 {
     margin: 0 0 0.5rem;
+    font-family: "Outfit", sans-serif;
 }
 
 .progress-bar {
@@ -303,9 +305,7 @@ button:hover{
     background: rgb(0, 153, 255);
 }
 
-.titleComp{
-    color: white;
-}
+
 
 
 
@@ -337,7 +337,7 @@ button:hover{
 
 .about .imgMoi {
     max-width: 150px;
-    border-radius: 50%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
     margin: 10px auto;
     display: block;
 }
@@ -345,10 +345,14 @@ button:hover{
 .about .titleAbout2 {
     color: black;
     text-align: center;
+    font-family: "Outfit", sans-serif;
 }
 
 .about .pAbout{
     margin: 10px 0;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    
 }
 
 .skillsAbout {
@@ -387,5 +391,7 @@ button:hover{
 }
 
 .cta a:hover {
-    background: #0056b3;
+    background: linear-gradient(45deg, pink, blue);
 }
+
+
