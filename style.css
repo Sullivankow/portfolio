@@ -395,3 +395,71 @@ button:hover{
 }
 
 
+
+
+
+/* Section des projets */
+#projects {
+    padding: 50px;
+    background: #fff;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-card .imgZoo {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.project-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.project-info a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    background: #007BFF;
+    border-radius: 5px;
+}
+
+.project-info a:hover {
+    background:linear-gradient(45deg, pink, blue);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    margin-top: 50px;
+}
