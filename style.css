@@ -398,7 +398,7 @@ button:hover{
 
 
 
-/* Section des projets */
+/* PAGE MES PROJETS */
 #projects {
     padding: 50px;
     background: #fff;
@@ -453,6 +453,9 @@ button:hover{
 
 .project-info a:hover {
     background:linear-gradient(45deg, pink, blue);
+}
+.titleProject {
+    font-family: "Outfit", sans-serif;
 }
 
 /* Footer */
