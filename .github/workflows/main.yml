@@ -23,7 +23,7 @@ jobs:
         username: skportfolio
         password: ${{ secrets.ftp_password }}
         exclude: |
-          **/.git*
+          **/.git* 
           **/.git*/** 
         server-dir: /www/
         protocol: ftps
