@@ -26,5 +26,5 @@ jobs:
           **/.git* 
           **/.git*/** 
         server-dir: /www/
-        protocol: ftps
+        protocol: ftp
         port: 21
