@@ -3,13 +3,16 @@
 
 
 
+
 import './index.css';
+import Header from './components/header';
 
 function App() {
 
   return (
     <>
-      <div className="text-red-500">Bonjour</div>
+      <Header />
+      
     </>
   )
 }
