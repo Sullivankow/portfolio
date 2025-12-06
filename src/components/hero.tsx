@@ -1,22 +1,27 @@
 import React from "react";
 import logoW from "../assets/logos/logo_w.svg";
 
-const products = [
+const strengths = [
   {
-    name: "Figma",
-    logo: "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/mark/figma.png",
-    desc: "L’IA gère les tâches répétitives pour vous.",
-    badge: "Nouveau",
+    name: "Sites performants & modernes",
+    icon: (
+      <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><path fill="#38bdf8" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 15h-2v-2h2v2Zm0-4h-2V7h2v6Z"/></svg>
+    ),
+    desc: "Des solutions rapides, responsives et adaptées à tous les écrans pour valoriser votre image en ligne."
   },
   {
-    name: "Miro",
-    logo: "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/mark/miro.png",
-    desc: "Laissez l’IA automatiser les tâches pour votre business.",
+    name: "Expertise React & Tailwind",
+    icon: (
+      <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><path fill="#06b6d4" d="M12 2c2.21 0 4 1.79 4 4 0 1.38-.7 2.6-1.76 3.32A6.978 6.978 0 0 1 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.61 1.41-4.89 3.76-6.18A3.99 3.99 0 0 1 12 2Zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 14a5 5 0 0 0 5-5c0-1.64-.8-3.09-2.05-4.01A3.99 3.99 0 0 1 12 8a3.99 3.99 0 0 1-2.95 1.99A5.002 5.002 0 0 0 12 18Z"/></svg>
+    ),
+    desc: "Un développement moderne, maintenable et évolutif grâce aux technologies les plus récentes."
   },
   {
-    name: "Webflow",
-    logo: "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/mark/webflow.png",
-    desc: "L’IA s’occupe du répétitif, votre équipe se concentre sur l’essentiel.",
+    name: "Accompagnement sur-mesure",
+    icon: (
+      <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><path fill="#fbbf24" d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4Zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4Z"/></svg>
+    ),
+    desc: "Conseils, écoute et suivi personnalisé pour chaque projet, de l’idée à la mise en ligne."
   },
 ];
 
@@ -77,8 +82,16 @@ const Hero = () => {
 
       {/* ...Avatars + étoiles supprimés... */}
 
+      {/* Animation au-dessus du titre principal */}
+      <div className="flex flex-col items-center mt-8 animate-bounce-slow select-none">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-lg">
+          <path d="M21.5 2L7 22h10l-1.5 14L31 16h-10l1.5-14z" fill="#38bdf8" stroke="#fff" strokeWidth="2"/>
+        </svg>
+        <span className="text-xs text-blue-200 mt-1 tracking-wide uppercase font-semibold">Boostez votre présence en ligne</span>
+      </div>
+
       {/* Titre principal */}
-      <h1 className="text-4xl md:text-6xl font-bold text-center max-w-3xl mt-8 bg-gradient-to-r from-white to-blue-400 text-transparent bg-clip-text">
+      <h1 className="text-4xl md:text-6xl font-bold text-center max-w-3xl mt-4 bg-gradient-to-r from-white to-blue-400 text-transparent bg-clip-text">
         Développeur web & créateur d’expériences digitales
       </h1>
       <p className="text-gray-200 text-base text-center max-w-xl mt-3">
@@ -87,18 +100,15 @@ const Hero = () => {
 
       {/* ...Barre de recherche supprimée... */}
 
-      <p className='text-gray-200 mt-4 text-sm'>2000+ produits et mise à jour quotidienne</p>
+      {/* ...texte info supprimé... */}
 
-      {/* Grille de produits */}
+      {/* Points forts */}
       <div className='relative w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8 mt-14'>
-        {products.map((prod, idx) => (
-          <div key={idx} className='bg-gradient-to-b from-[#2A0150] to-[#090025] hover:-translate-y-1 transition duration-300 border border-blue-900 rounded-lg p-6 space-y-4'>
-            <div className='flex items-start justify-between'>
-              <img className='w-12 h-12' src={prod.logo} alt={prod.name} />
-              {prod.badge && <span className='bg-blue-900 text-xs text-white rounded-full px-4 py-2'>{prod.badge}</span>}
-            </div>
-            <p className='text-lg text-white'>{prod.name}</p>
-            <p className='text-sm text-gray-200'>{prod.desc}</p>
+        {strengths.map((item, idx) => (
+          <div key={idx} className='bg-gradient-to-b from-[#2A0150] to-[#090025] hover:-translate-y-1 transition duration-300 border border-blue-900 rounded-lg p-6 space-y-4 flex flex-col items-center text-center'>
+            <div className='mb-2'>{item.icon}</div>
+            <p className='text-lg text-white font-semibold'>{item.name}</p>
+            <p className='text-sm text-gray-200'>{item.desc}</p>
           </div>
         ))}
       </div>
