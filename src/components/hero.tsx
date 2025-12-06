@@ -43,7 +43,7 @@ const Hero = () => {
             </a>
           ))}
         </div>
-        <button className="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-6 h-10 rounded-full text-sm transition">Demander un devis</button>
+        <button className="hidden md:block bg-white  text-black hover:bg-gray-100 px-6 h-10 rounded-full text-sm transition mr-4">Demander un devis</button>
         {/* Menu burger mobile */}
         <div className="md:hidden flex items-center pr-4">
           <button className="p-2 rounded bg-white hover:bg-gray-100 focus:outline-none" aria-label="Ouvrir le menu" onClick={() => setMenuOpen(true)}>
@@ -55,8 +55,8 @@ const Hero = () => {
       <div className={`fixed top-0 right-0 h-full w-64 bg-[#0a2342] text-white shadow-lg z-50 transform ${menuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out md:hidden`}>
         <div className="flex justify-between items-center px-6 py-4 border-b border-white/10">
           <img src={logoW} alt="Logo SunDev" className="h-12 w-auto" />
-          <button aria-label="Fermer le menu" onClick={() => setMenuOpen(false)} className="p-2">
-            <svg width="28" height="28" fill="none" stroke="#0a2342" strokeWidth="2" viewBox="0 0 24 24"><path d="M6 6L18 18M6 18L18 6"/></svg>
+          <button aria-label="Fermer le menu" onClick={() => setMenuOpen(false)} className="bg-transparent !bg-transparent hover:!bg-transparent active:!bg-transparent focus:!bg-transparent shadow-none ring-0 outline-none border-none">
+            <svg width="28" height="28" fill="none" stroke="#fff" strokeWidth="2" viewBox="0 0 24 24"><path d="M6 6L18 18M6 18L18 6"/></svg>
           </button>
         </div>
         <ul className="flex flex-col gap-6 px-6 py-8">
@@ -68,7 +68,7 @@ const Hero = () => {
             </li>
           ))}
         </ul>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 h-10 rounded-full text-sm transition mx-6">Demander un devis</button>
+        <button className="bg-white text-black hover:bg-gray-100 px-6 h-10 rounded-full text-sm transition mx-6">Demander un devis</button>
       </div>
       {/* Overlay pour fermer en cliquant à côté */}
       {menuOpen && (
