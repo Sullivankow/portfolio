@@ -1,4 +1,5 @@
 import React from "react";
+import useRevealOnScroll from '../hooks/useRevealOnScroll';
 import logoW from "../assets/logos/logo_w.svg";
 import Banniere from "./banniere";
 
@@ -37,8 +38,13 @@ const navLinks = [
 
 const Hero = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const [ref, visible] = useRevealOnScroll();
+  // On s'assure que le ref est bien passé à une balise DOM native
   return (
-    <section className="flex flex-col items-center bg-gradient-to-b from-[#0a2342] to-[#3B006E] text-white font-sans min-h-screen w-full p-0 m-0">
+    <section
+      ref={ref}
+      className={`flex flex-col items-center bg-gradient-to-b from-[#0a2342] to-[#3B006E] text-white font-sans min-h-screen w-full p-0 m-0 ${visible ? 'animate-slide-in' : 'opacity-0'}`}
+    >
       {/* Navigation responsive */}
       <nav className="flex items-center justify-between py-3 w-full">
         <img src={logoW} alt="Logo SunDev" className="h-16 w-auto pl-6" />
