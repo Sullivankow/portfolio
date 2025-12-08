@@ -51,12 +51,21 @@ const Hero = () => {
         {/* Menu desktop */}
         <div className="hidden md:flex gap-6">
           {navLinks.map(link => (
-            <a key={link.name} href={link.href} className="text-white hover:text-blue-400">
+            <a key={link.name} href={link.href} className="nav-link">
               {link.name}
             </a>
           ))}
         </div>
-        <button className="hidden md:block bg-white  text-black hover:bg-gray-100 px-6 h-10 rounded-full text-sm transition mr-4">Demander un devis</button>
+        <a
+          href="#contact"
+          className="hidden md:inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-semibold py-3 px-8 rounded-full shadow-xl transition-all duration-200 text-lg group mr-4 focus:outline-none"
+        >
+          <svg className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-200" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7.5" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 15v4m0 0h-4m4 0-5-5" />
+          </svg>
+          Demander un devis
+        </a>
         {/* Menu burger mobile */}
         <div className="md:hidden flex items-center pr-4">
           <button
@@ -83,13 +92,22 @@ const Hero = () => {
         <ul className="flex flex-col gap-6 px-6 py-8">
           {navLinks.map(link => (
             <li key={link.name}>
-              <a href={link.href} className="block text-lg font-medium text-white hover:text-blue-400 transition-colors duration-200" onClick={() => setMenuOpen(false)}>
+              <a href={link.href} className="nav-link block text-lg font-medium transition-colors duration-200" onClick={() => setMenuOpen(false)}>
                 {link.name}
               </a>
             </li>
           ))}
         </ul>
-        <button className="bg-white text-black hover:bg-gray-100 px-6 h-10 rounded-full text-sm transition mx-6">Demander un devis</button>
+        <a
+          href="#contact"
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-semibold py-2 px-4 rounded-full shadow-xl transition-all duration-200 text-base group mx-6 focus:outline-none md:py-3 md:px-8 md:text-lg md:gap-3"
+        >
+          <svg className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-200" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7.5" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 15v4m0 0h-4m4 0-5-5" />
+          </svg>
+          <span className="truncate">Demander un devis</span>
+        </a>
       </div>
       {/* Overlay pour fermer en cliquant à côté */}
       {menuOpen && (

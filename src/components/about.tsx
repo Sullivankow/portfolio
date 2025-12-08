@@ -39,7 +39,7 @@ const features = [
 function About() {
   const [ref, visible] = useRevealOnScroll<HTMLDivElement>();
   return (
-    <div
+    <div id="about"
       ref={ref}
       className={`overflow-hidden bg-[#0a2342] py-20 sm:py-32 text-white font-sans ${visible ? 'animate-slide-in' : 'opacity-0'}`}
     >
@@ -66,9 +66,24 @@ function About() {
                       {feature.name}
                     </dt>{' '}
                     <dd className="inline">{feature.description}</dd>
-                  </div>
+                    </div>
+                    
+       
                 ))}
-              </dl>
+                              </dl>
+                                {/* Bouton Contact modernisé */}
+        <div className="mt-12 flex justify-center">
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-semibold py-3 px-8 rounded-full shadow-xl transition-all duration-200 text-lg group focus:outline-none"
+          >
+            <svg className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-200" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7.5" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21 15v4m0 0h-4m4 0-5-5" />
+            </svg>
+            Me contacter
+          </a>
+        </div>
             </div>
           </div>
           <img
@@ -76,7 +91,7 @@ function About() {
             src="public/images/sundev.JPG"
             width={800}
             height={480}
-            className="w-full max-w-lg rounded-xl shadow-xl ring-1 ring-white/10 mx-auto"
+            className="w-full max-w-lg rounded-xl shadow-xl ring-1 ring-white/10 mx-auto transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
           />
         </div>
       </div>
