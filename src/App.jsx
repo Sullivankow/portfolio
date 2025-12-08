@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Hero from './components/hero';
 import About from './components/about';
+import Process from './components/process';
 import Services from './components/services';
 import Portfolio from './components/portfolio';
 import Contact from './components/contact';
@@ -24,6 +25,7 @@ function App() {
           <>
             <Hero />
             <About />
+            <Process />
             <Services />
             <Portfolio />
             <Contact />

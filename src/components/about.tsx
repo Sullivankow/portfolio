@@ -56,7 +56,7 @@ function About() {
                 Un accompagnement technique & humain
               </p>
               <p className="mt-6 text-lg text-gray-200">
-                Passionné par le web, j’aide les entreprises à se démarquer grâce à des solutions sur-mesure, performantes et sécurisées.
+                Développeur web diplômé Bac + 2, je me passionne pour la création digitale et les innovations en informatique depuis plusieurs années. Après avoir accompagné de nombreux clients dans la réalisation de leurs projets, j’ai fondé SunDev pour proposer un accompagnement humain, technique et sur-mesure. Mon objectif : valoriser votre image en ligne avec des sites modernes, performants et sécurisés, tout en restant à l’écoute de vos besoins et en vous guidant à chaque étape.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base text-gray-300 lg:max-w-none">
                 {features.map((feature) => (
