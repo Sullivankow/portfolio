@@ -1,5 +1,8 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 @import "tailwindcss";
+
+
 
 :root {
   font-family: 'Lato', system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -16,6 +19,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
+
+
+
 a {
   font-weight: 500;
   color: white;
@@ -25,12 +33,17 @@ a:hover {
   color: #34d399;
 }
 
-body {
+
+body, html {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+}
+/*Masque la barre de scroll verticale*/
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 h1 {
