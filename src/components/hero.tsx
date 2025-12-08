@@ -11,7 +11,7 @@ const strengths = [
     desc: "Des solutions rapides, responsives et adaptées à tous les écrans pour valoriser votre image en ligne."
   },
   {
-    name: "Expertise React & Tailwind",
+    name: "Mon Expertise ",
     icon: (
       <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><path fill="#06b6d4" d="M12 2c2.21 0 4 1.79 4 4 0 1.38-.7 2.6-1.76 3.32A6.978 6.978 0 0 1 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.61 1.41-4.89 3.76-6.18A3.99 3.99 0 0 1 12 2Zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 14a5 5 0 0 0 5-5c0-1.64-.8-3.09-2.05-4.01A3.99 3.99 0 0 1 12 8a3.99 3.99 0 0 1-2.95 1.99A5.002 5.002 0 0 0 12 18Z"/></svg>
     ),
@@ -28,10 +28,11 @@ const strengths = [
 
 const navLinks = [
   { name: "Accueil", href: "#home" },
+  { name: "À propos", href: "#about" },
   { name: "Services", href: "#services" },
   { name: "Projets", href: "#projects" },
-  { name: "Équipe", href: "#team" },
-  { name: "Contact", href: "#contact" },
+  { name: "FAQ", href: "#faq" },
+  
 ];
 
 const Hero = () => {
@@ -52,8 +53,16 @@ const Hero = () => {
         <button className="hidden md:block bg-white  text-black hover:bg-gray-100 px-6 h-10 rounded-full text-sm transition mr-4">Demander un devis</button>
         {/* Menu burger mobile */}
         <div className="md:hidden flex items-center pr-4">
-          <button className="p-2 rounded bg-white hover:bg-gray-100 focus:outline-none" aria-label="Ouvrir le menu" onClick={() => setMenuOpen(true)}>
-            <svg width="28" height="28" fill="none" stroke="#0a2342" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <button
+            className="p-2 rounded bg-[#0a2342] border-2 border-transparent hover:border-white focus:border-white transition-colors duration-200 !bg-[#0a2342] hover:!bg-[#0a2342] active:!bg-[#0a2342] focus:!bg-[#0a2342]"
+            aria-label="Ouvrir le menu"
+            onClick={() => setMenuOpen(true)}
+          >
+            <svg width="28" height="28" fill="none" stroke="#fff" strokeWidth="2.5" viewBox="0 0 24 24">
+              <path d="M4 6h16" />
+              <path d="M4 12h16" />
+              <path d="M4 18h16" />
+            </svg>
           </button>
         </div>
       </nav>
