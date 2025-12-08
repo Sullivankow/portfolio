@@ -1,5 +1,6 @@
 import React from "react";
 import logoW from "../assets/logos/logo_w.svg";
+import Banniere from "./banniere";
 
 const strengths = [
   {
@@ -111,6 +112,9 @@ const Hero = () => {
             <p className='text-sm text-gray-200'>{item.desc}</p>
           </div>
         ))}
+      </div>
+      <div className="mt-12 w-full">
+        <Banniere />
       </div>
     </section>
   );
