@@ -21,7 +21,7 @@ const services = [
     featured: false,
   },
   {
-    name: 'Site Pro & visibilité',
+    name: 'Site Premium & visibilité',
     id: 'service-pro',
     price: 'À partir de 1590€',
     description: "La solution la plus populaire pour les entrepreneurs et PME : site professionnel, référencement optimisé, accompagnement complet et évolutif.",
@@ -140,7 +140,49 @@ export default function Services() {
           ))}
           </div>
         </div>
-        
-    </section>
-  );
-}
+
+
+
+        {/* Section Packs */}
+        <section className="mx-auto mt-20 max-w-5xl px-4">
+          <h2 className="text-center text-2xl font-bold text-blue-400 mb-8">Options Sérénité & Hébergement</h2>
+          <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch bg-white/10 rounded-3xl p-6 md:p-10">
+            {/* Pack Maintenance */}
+            <div className="flex-1 text-center flex flex-col h-full bg-white/5 border border-blue-400 rounded-2xl p-8 shadow-lg min-h-[500px]">
+              <h3 className="text-xl font-bold text-blue-400 mb-2">Pack Maintenance & Sérénité</h3>
+              <p className="text-base text-gray-200 mb-4">Gardez l’esprit tranquille après la mise en ligne : je m’occupe de tout !</p>
+              <div className="text-2xl font-bold text-white mb-2">49 €/mois <span className="text-base font-normal text-gray-300">(sans engagement)</span></div>
+              <ul className="text-left text-gray-200 space-y-2 text-sm mb-4 mx-auto max-w-xs">
+                <li>• Mises à jour régulières du site et des plugins</li>
+                <li>• Sauvegardes automatiques et restauration rapide</li>
+                <li>• Surveillance de la sécurité et corrections préventives</li>
+                <li>• Support technique prioritaire (email & téléphone)</li>
+                <li>• Petites évolutions incluses (textes, images, horaires...)</li>
+                <li>• Rapport mensuel d’intervention</li>
+              </ul>
+              <div className="text-xs text-gray-400 mb-2">3 mois offerts avec toute création de site SunDev</div>
+              <a href="#contact" className="bg-blue-500 text-white rounded-md px-4 py-2 font-semibold hover:bg-blue-400 transition-colors duration-200">Souscrire au pack maintenance</a>
+            </div>
+            {/* Pack Hébergement */}
+            <div className="flex-1 text-center flex flex-col h-full bg-white/5 border border-blue-400 rounded-2xl p-8 shadow-lg min-h-[500px]">
+              <h3 className="text-xl font-bold text-blue-400 mb-2">Pack Hébergement & Nom de domaine</h3>
+              <p className="text-base text-gray-200 mb-4">Hébergement professionnel, sécurisé et accompagné : je gère tout pour vous, de la technique au support.</p>
+              <div className="text-2xl font-bold text-white mb-2">14 €/mois <span className="text-base font-normal text-gray-300">ou 149 €/an</span></div>
+              <ul className="text-left text-gray-200 space-y-2 text-sm mb-4 mx-auto max-w-xs">
+                <li>• Hébergement sécurisé et performant (France/EU)</li>
+                <li>• Nom de domaine inclus (.fr ou .com)</li>
+                <li>• Certificat SSL (https) offert</li>
+                <li>• Comptes emails professionnels (sur demande)</li>
+                <li>• Gestion technique complète (renouvellement, configuration, migrations...)</li>
+                <li>• Support réactif et accompagnement humain</li>
+                <li>• Conseils personnalisés pour la gestion de votre présence en ligne</li>
+              </ul>
+              <div className="text-xs text-gray-400 mb-2">Offre réservée aux clients SunDev</div>
+              <a href="#contact" className="bg-blue-500 text-white rounded-md px-4 py-2 font-semibold hover:bg-blue-400 transition-colors duration-200">Souscrire au pack hébergement</a>
+            </div>
+          </div>
+        </section>
+
+      </section>
+    );
+  }
