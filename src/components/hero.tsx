@@ -30,8 +30,8 @@ const strengths = [
 const navLinks = [
   { name: "Accueil", href: "#home" },
   { name: "À propos", href: "#about" },
+  { name: "Réalisations", href: "#projects" },
   { name: "Services", href: "#services" },
-  { name: "Projets", href: "#projects" },
   { name: "FAQ", href: "#faq" },
   
 ];
