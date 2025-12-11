@@ -124,10 +124,27 @@ const Hero = () => {
         <span className="text-xs text-blue-200 mt-1 tracking-wide uppercase font-semibold">Boostez votre présence en ligne</span>
       </div>
 
-      {/* Titre principal */}
-      <h1 className="text-4xl md:text-6xl font-bold text-center max-w-3xl mt-4 bg-gradient-to-r from-white to-blue-400 text-transparent bg-clip-text">
-        Développeur web & créateur d’expériences digitales
+      {/* Titre principal en split text */}
+      <h1 className="text-4xl md:text-6xl font-bold text-center max-w-3xl mt-4 flex flex-wrap justify-center leading-[1.22]">
+        {"Développeur web & créateur d’expériences digitales"
+          .split(' ')
+          .map((word, i) => (
+            <span
+              key={i}
+              className="inline-block opacity-0 animate-fade-in-up bg-gradient-to-r from-white to-blue-400 text-transparent bg-clip-text py-1.5"
+              style={{
+                animationDelay: `${i * 0.08 + 0.1}s`,
+                animationDuration: '0.9s',
+                animationTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+                animationFillMode: 'forwards',
+                marginRight: '0.5ch',
+              }}
+            >
+              {word}
+            </span>
+          ))}
       </h1>
+
       <p className="text-gray-200 text-base text-center max-w-xl mt-3">
         J’accompagne les entreprises et entrepreneurs dans la création de sites web modernes, performants et sur-mesure. Spécialiste React, Tailwind, et solutions sur mesure pour booster votre présence en ligne.
       </p>
