@@ -41,7 +41,8 @@ const Hero = () => {
   const [ref, visible] = useRevealOnScroll();
   // On s'assure que le ref est bien passé à une balise DOM native
   return (
-    <section
+    <section 
+      id="home"
       ref={ref}
       className={`flex flex-col items-center bg-gradient-to-b from-[#0a2342] to-[#3B006E] text-white font-sans min-h-screen w-full p-0 m-0 ${visible ? 'animate-slide-in' : 'opacity-0'}`}
     >

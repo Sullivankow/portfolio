@@ -33,6 +33,7 @@ function App() {
             <Footer />
           </>
         } />
+        <Route path="/hero" element={<Hero />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
