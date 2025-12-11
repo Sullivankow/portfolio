@@ -55,9 +55,9 @@ export default function FAQ() {
       ref={ref}
       className={`relative isolate bg-[#132a4d] px-6 py-24 sm:py-32 lg:px-8 text-white font-sans ${visible ? 'animate-slide-in' : 'opacity-0'}`}
     >
-      <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        {/* Colonne gauche : FAQ */}
-        <div>
+      <div className="mx-auto max-w-3xl flex flex-col items-center justify-center">
+        {/* Bloc FAQ centré */}
+        <div className="w-full">
           <div className="max-w-3xl text-left">
             <h2 className="text-base font-semibold text-blue-400 tracking-wide uppercase">FAQ</h2>
             <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
@@ -89,19 +89,7 @@ export default function FAQ() {
             ))}
           </div>
         </div>
-        {/* Colonne droite : animation décorative */}
-        <div className="flex flex-col items-center justify-center h-full">
-          {/* Exemple d’animation décorative : cercle animé */}
-          <div className="relative w-64 h-64 flex items-center justify-center">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-400 via-[#3B006E] to-[#0a2342] animate-pulse opacity-40"></div>
-            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="60" cy="60" r="50" stroke="#3B006E" strokeWidth="8" fill="none" />
-              <circle cx="60" cy="60" r="35" stroke="#0a2342" strokeWidth="4" fill="none" />
-              <circle cx="60" cy="60" r="20" stroke="#fff" strokeWidth="2" fill="none" />
-            </svg>
-            <span className="absolute bottom-4 left-1/2 -translate-x-1/2 text-blue-300 font-semibold text-lg">SunDev</span>
-          </div>
-        </div>
+        {/* Colonne droite supprimée pour centrage */}
       </div>
     </section>
 
