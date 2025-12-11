@@ -28,8 +28,8 @@ function App() {
             <Process />
             <Portfolio />
             <Services />
-            <Contact />
             <Faq />
+            <Contact />
             <Footer />
           </>
         } />

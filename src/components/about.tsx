@@ -88,7 +88,7 @@ function About() {
           </div>
           <img
             alt="Aperçu projet SunDev"
-            src="public/images/sundev.JPG"
+            src="/images/sundev.JPG"
             width={800}
             height={480}
             className="w-full max-w-lg rounded-xl shadow-xl ring-1 ring-white/10 mx-auto transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"

@@ -1,9 +1,98 @@
+// Section FAQ SunDev : questions fréquentes sur l’hébergement, le développement, la maintenance, etc.
+// Charte graphique : bleu marine, blanc, volet accordéon, responsive
+import { useState } from 'react';
+import useRevealOnScroll from '../hooks/useRevealOnScroll';
 
+// Liste des questions/réponses
+const faqs = [
+	{
+		question: "Comment se passe l’hébergement de mon site ?",
+		answer:
+			"Je propose un pack hébergement clé en main : serveur sécurisé, nom de domaine, certificat SSL, gestion technique et support inclus. Vous n’avez rien à gérer !",
+	},
+	{
+		question: "Combien de temps pour créer mon site ?",
+		answer:
+			"Un site vitrine est généralement livré en 2 à 3 semaines. Un site sur-mesure ou e-commerce peut demander 4 à 6 semaines selon la complexité et les échanges.",
+	},
+	{
+		question: "La maintenance est-elle obligatoire ?",
+		answer:
+			"Non, mais elle est fortement recommandée pour garantir la sécurité, les mises à jour et un support réactif. Je propose un pack maintenance sans engagement, avec 3 mois offerts à la création.",
+	},
+	{
+		question: "Puis-je modifier mon site moi-même ?",
+		answer:
+			"Oui ! Je forme chaque client à la prise en main de son site. Vous pouvez modifier textes, images, horaires, etc. Et je reste disponible en cas de besoin.",
+	},
+	{
+		question: "Quels sont les moyens de paiement acceptés ?",
+		answer:
+			"Virement bancaire, carte bancaire, paiement en plusieurs fois possible selon le projet.",
+	},
+	{
+		question: "Mon site sera-t-il bien référencé ?",
+		answer:
+			"Tous les sites sont optimisés pour le référencement naturel (SEO) dès la création. Je propose aussi des options avancées pour booster votre visibilité.",
+	},
+];
 
-function faq() {
-  return (
-    <div>faq</div>
-  )
+// Composant principal FAQ
+export default function FAQ() {
+	// État pour gérer l’ouverture des volets
+	const [openIndex, setOpenIndex] = useState<number | null>(null);
+	// Hook d’animation au scroll
+	const [ref, visible] = useRevealOnScroll<HTMLElement>();
+
+	// Fonction pour ouvrir/fermer un volet
+	const toggle = (idx: number) => {
+		setOpenIndex(openIndex === idx ? null : idx);
+	};
+
+	return (
+		<section
+			id="faq"
+			ref={ref}
+			className={`relative isolate bg-[#132a4d] px-6 py-24 sm:py-32 lg:px-8 text-white font-sans ${visible ? 'animate-slide-in' : 'opacity-0'}`}
+		>
+			{/* Titre */}
+			<div className="mx-auto max-w-3xl text-center">
+				<h2 className="text-base font-semibold text-blue-400 tracking-wide uppercase">FAQ</h2>
+				<p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+					Questions fréquentes
+				</p>
+			</div>
+			{/* Liste des volets FAQ */}
+			<div className="mx-auto mt-16 max-w-2xl divide-y divide-white/10">
+				{faqs.map((faq, idx) => (
+					<div key={faq.question} className="py-4">
+						<button
+							className={`w-full flex justify-between items-center text-left px-4 py-3 rounded-xl bg-white/5 hover:bg-blue-400/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 ${openIndex === idx ? 'border border-blue-400' : ''}`}
+							onClick={() => toggle(idx)}
+							aria-expanded={openIndex === idx}
+							aria-controls={`faq-panel-${idx}`}
+						>
+							<span className="text-lg font-semibold text-blue-300">{faq.question}</span>
+							<span className={`ml-4 transition-transform duration-200 ${openIndex === idx ? 'rotate-90' : ''}`}>
+								▶
+							</span>
+						</button>
+						{/* Volet réponse */}
+						{openIndex === idx && (
+							<div
+								id={`faq-panel-${idx}`}
+								className="mt-3 px-4 py-2 text-base text-gray-200 bg-white/5 rounded-xl"
+							>
+								{faq.answer}
+							</div>
+						)}
+					</div>
+				))}
+			</div>
+		</section>
+	);
 }
 
-export default faq
+
+
+
