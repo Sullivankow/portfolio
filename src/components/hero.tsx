@@ -1,6 +1,5 @@
 import React from "react";
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
-import logoW from "../assets/logos/logo_w.svg";
 import Banniere from "./banniere";
 
 const strengths = [
@@ -48,7 +47,7 @@ const Hero = () => {
     >
       {/* Navigation responsive */}
       <nav className="flex items-center justify-between py-3 w-full">
-        <img src={logoW} alt="Logo SunDev" className="h-16 w-auto pl-6" />
+        <img src="/logos/logo_w.svg" alt="Logo SunDev" width="120" height="48" loading="lazy" className="h-16 w-auto pl-6" />
         {/* Menu desktop */}
         <div className="hidden md:flex gap-6">
           {navLinks.map(link => (
@@ -85,7 +84,7 @@ const Hero = () => {
       {/* Menu mobile glissant */}
       <div className={`fixed top-0 right-0 h-full w-64 bg-[#0a2342] text-white shadow-lg z-50 transform ${menuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out md:hidden`}>
         <div className="flex justify-between items-center px-6 py-4 border-b border-white/10">
-          <img src={logoW} alt="Logo SunDev" className="h-12 w-auto" />
+          <img src="/logos/logo_w.svg" alt="Logo SunDev" width="90" height="36" loading="lazy" className="h-12 w-auto" />
           <button aria-label="Fermer le menu" onClick={() => setMenuOpen(false)} className="bg-transparent !bg-transparent hover:!bg-transparent active:!bg-transparent focus:!bg-transparent shadow-none ring-0 outline-none border-none">
             <svg width="28" height="28" fill="none" stroke="#fff" strokeWidth="2" viewBox="0 0 24 24"><path d="M6 6L18 18M6 18L18 6"/></svg>
           </button>

@@ -1,7 +1,6 @@
 
 
-import React from "react";
-import logoW from "../assets/logos/logo_w.svg";
+
 
 const navLinks = [
 	{ name: "Accueil", href: "#home" },
@@ -42,7 +41,7 @@ const Footer = () => {
 			<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
 				{/* Logo et nom */}
 				<div className="flex flex-col items-center md:items-start gap-2">
-					<img src={logoW} alt="Logo SunDev" className="h-12 w-auto mb-2" />
+					<img src="/logos/logo_w.svg" alt="Logo SunDev" width="90" height="36" loading="lazy" className="h-12 w-auto mb-2" />
 				</div>
 				{/* Liens de navigation */}
 				<nav className="flex flex-wrap gap-6 justify-center md:justify-start">

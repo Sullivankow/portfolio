@@ -96,10 +96,10 @@ export default function Services() {
               {service.name}
             </h3>
             <p className="mt-4 flex items-baseline gap-x-2">
-              <span className={classNames(service.featured ? 'text-white' : 'text-white', 'text-3xl font-bold')}>{service.price}</span>
+              <span className={classNames('text-white', 'text-3xl font-bold')}>{service.price}</span>
             </p>
             <p className={classNames(service.featured ? 'text-gray-200' : 'text-gray-300', 'mt-6 text-base')}>{service.description}</p>
-            <ul role="list" className="mt-8 space-y-3 text-sm text-gray-200 text-left">
+            <ul className="mt-8 space-y-3 text-sm text-gray-200 text-left">
               {service.features.map((feature, i) => (
                 <li key={feature} className="flex gap-x-3 items-start">
                   {i % 3 === 0 && (

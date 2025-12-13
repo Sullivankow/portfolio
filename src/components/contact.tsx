@@ -1,6 +1,6 @@
 // Formulaire de contact SunDev, charte graphique, responsive, animation au scroll
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
-import logoW from '../assets/logos/logo_w.svg';
+
 
 export default function Contact() {
   // Animation au scroll
@@ -16,7 +16,7 @@ export default function Contact() {
         {/* Bloc gauche : logo, texte, infos */}
         <div className="flex flex-col justify-center h-full">
           <h2 className="text-4xl font-bold mb-4 flex flex-col items-start">
-            <img src={logoW} alt="Logo SunDev" className="h-16 w-auto mb-6" />
+            <img src="/logos/logo_w.svg" alt="Logo SunDev" width="120" height="48" loading="lazy" className="h-16 w-auto mb-6" />
             Contactez-moi
           </h2>
           <p className="text-gray-300 mb-8">Vous avez un projet, une question ou envie d’échanger ? Remplissez le formulaire ou contactez-moi directement, je vous réponds rapidement.</p>

@@ -27,6 +27,9 @@ function Banniere() {
             key={idx}
             src={`/src/assets/techno/${logo}`}
             alt={logo.replace(/\..+$/, "")}
+            width="48"
+            height="48"
+            loading="lazy"
             className="h-12 w-auto object-contain drop-shadow-lg transition-transform duration-300 hover:scale-110"
             style={{ minWidth: 48 }}
           />
@@ -37,6 +40,9 @@ function Banniere() {
             key={"dup-"+idx}
             src={`/src/assets/techno/${logo}`}
             alt={logo.replace(/\..+$/, "")}
+            width="48"
+            height="48"
+            loading="lazy"
             className="h-12 w-auto object-contain drop-shadow-lg transition-transform duration-300 hover:scale-110"
             style={{ minWidth: 48 }}
           />

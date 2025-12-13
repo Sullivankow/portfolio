@@ -11,28 +11,24 @@ import 'swiper/css/pagination';
 const projects = [
   {
     name: 'SunDev Vitrine',
-    image: '/images/vitrine.jpg', // à remplacer par tes images
     description: "Site vitrine moderne pour une agence locale, design sur-mesure, responsive et SEO optimisé.",
     stack: ['React', 'Vite', 'Tailwind'],
     link: '#',
   },
   {
     name: 'E-commerce sur-mesure',
-    image: '/images/ecommerce.jpg',
     description: "Boutique en ligne avec gestion de catalogue, paiement sécurisé et dashboard client.",
     stack: ['Next.js', 'Node.js', 'Stripe'],
     link: '#',
   },
   {
     name: 'Blog technique',
-    image: '/images/blog.jpg',
     description: "Blog personnel avec espace admin, publication d’articles, et intégration newsletter.",
     stack: ['Gatsby', 'GraphQL', 'Mailchimp'],
     link: '#',
   },
   {
     name: 'Application mobile RH',
-    image: '/images/mobile.jpg',
     description: "App mobile pour la gestion des congés et plannings, notifications push et interface intuitive.",
     stack: ['React Native', 'Expo', 'Firebase'],
     link: '#',
@@ -80,11 +76,7 @@ export default function Portfolio() {
           {projects.map((project) => (
             <SwiperSlide key={project.name}>
               <div className="bg-white/5 border border-white/10 rounded-3xl p-6 flex flex-col h-full justify-between shadow-xl transition duration-300 hover:scale-[1.03] hover:shadow-2xl">
-                {/* Image du projet */}
-                <div className="mb-4 rounded-xl overflow-hidden aspect-video bg-gray-900 flex items-center justify-center">
-                  {/* Remplacer par <img src={project.image} ... /> si images réelles */}
-                  <span className="text-gray-500 text-lg">Aperçu</span>
-                </div>
+                {/* Image du projet supprimée car aucune image n'est disponible */}
                 {/* Titre */}
                 <h3 className="text-xl font-bold text-blue-400 mb-2">{project.name}</h3>
                 {/* Description */}
