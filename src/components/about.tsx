@@ -87,7 +87,7 @@ function About() {
           </div>
           <img
             alt="Aperçu projet SunDev"
-            src="/images/sundev.jpg"
+            src="/images/sundev.jpeg"
             width="800"
             height="480"
             loading="lazy"
