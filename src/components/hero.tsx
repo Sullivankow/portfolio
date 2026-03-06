@@ -125,7 +125,7 @@ const Hero = () => {
       </div>
 
       {/* Titre principal en split text */}
-      <h1 className="text-4xl md:text-6xl font-bold text-center max-w-3xl mt-4 flex flex-wrap justify-center leading-[1.22]">
+      <h1 className="text-4xl md:text-6xl font-bold text-center max-w-3xl mt-4 flex flex-wrap justify-center leading-[1.22] px-4 md:px-0">
         {"Développeur fullstack passionné, prêt à rejoindre votre équipe"
           .split(' ')
           .map((word, i) => (
@@ -145,7 +145,7 @@ const Hero = () => {
           ))}
       </h1>
 
-      <p className="text-gray-200 text-base text-center max-w-xl mt-3">
+      <p className="text-gray-200 text-base text-center max-w-xl mt-3 px-4 md:px-0">
         À la recherche d’un poste stimulant en développement fullstack. Je mets à profit mon expertise en front-end (React, Tailwind, TypeScript) et back-end (Node.js, Express, bases de données) pour concevoir des solutions innovantes et contribuer à vos projets.
       </p>
 

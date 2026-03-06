@@ -80,7 +80,9 @@ function About() {
         <div className="mt-12 flex justify-center">
           <a
             href="#contact"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-semibold py-3 px-8 rounded-full shadow-xl transition-all duration-200 text-lg group focus:outline-none"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-semibold py-3 px-8 rounded-full shadow-xl transition-all duration-200 text-lg group focus:outline-none
+            sm:py-3 sm:px-8 sm:text-lg
+            py-2 px-4 text-sm"
           >
             <svg className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-200" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7.5" />
@@ -91,7 +93,9 @@ function About() {
           <a
             href="/CV_DEV_SullivanKowalski.pdf"
             download
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-white font-semibold py-3 px-8 rounded-full shadow-xl transition-all duration-200 text-lg group ml-4 focus:outline-none"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-white font-semibold py-3 px-8 rounded-full shadow-xl transition-all duration-200 text-lg group ml-4 focus:outline-none
+            sm:py-3 sm:px-8 sm:text-lg
+            py-2 px-4 text-sm"
           >
             <svg className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-200" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m0 0l-6-6m6 6l6-6" />

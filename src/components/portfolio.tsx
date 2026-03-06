@@ -170,7 +170,7 @@ export default function Portfolio() {
                     rel="noopener noreferrer"
                     className="bg-blue-500 text-white rounded-md px-4 py-2 font-semibold hover:bg-blue-400 transition-colors duration-200 text-center"
                   >
-                    Voir le projet
+                    Voir plus
                   </a>
                   {project.github && (
                     <a

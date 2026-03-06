@@ -56,7 +56,7 @@ export default function Contact() {
             <label htmlFor="message" className="block text-sm font-semibold mb-2">Message</label>
             <textarea id="message" name="message" rows={4} className="w-full rounded-md bg-[#101828] text-white px-4 py-3 border border-white/10 focus:border-blue-400 focus:ring-2 focus:ring-blue-400 outline-none resize-none" />
           </div>
-          <button type="submit" className="self-end bg-blue-500 text-white rounded-md px-6 py-3 font-semibold hover:bg-blue-400 transition-colors duration-200">Envoyer le message</button>
+          <button type="submit" className="self-end sm:self-end self-center mx-auto bg-blue-500 text-white rounded-md px-6 py-3 font-semibold hover:bg-blue-400 transition-colors duration-200">Envoyer le message</button>
         </form>
       </div>
     </section>
