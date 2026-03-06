@@ -5,10 +5,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Hero from './components/hero';
 import About from './components/about';
 import Process from './components/process';
-import Services from './components/services';
+
 import Portfolio from './components/portfolio';
 import Contact from './components/contact';
-import Faq from './components/faq';
+
 import Footer from './components/footer';
 
 
@@ -27,18 +27,17 @@ function App() {
             <About />
             <Process />
             <Portfolio />
-            <Services />
-            <Faq />
+           
             <Contact />
             <Footer />
           </>
         } />
         <Route path="/hero" element={<Hero />} />
         <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/skills" element={<Process />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/faq" element={<Faq />} />
+        
       </Routes>
     </Router>
   );

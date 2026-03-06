@@ -4,34 +4,34 @@ import Banniere from "./banniere";
 
 const strengths = [
   {
-    name: "Sites performants & modernes",
+    name: "Compétences fullstack",
     icon: (
       <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><path fill="#38bdf8" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 15h-2v-2h2v2Zm0-4h-2V7h2v6Z"/></svg>
     ),
-    desc: "Des solutions rapides, responsives et adaptées à tous les écrans pour valoriser votre image en ligne."
+    desc: "Développement fullstack : front-end (React, Tailwind, TypeScript) et back-end (Node.js, Express, bases de données). Création d’applications web complètes, robustes et évolutives."
   },
   {
-    name: "Mon Expertise ",
+    name: "Esprit d'équipe",
     icon: (
       <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><path fill="#06b6d4" d="M12 2c2.21 0 4 1.79 4 4 0 1.38-.7 2.6-1.76 3.32A6.978 6.978 0 0 1 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.61 1.41-4.89 3.76-6.18A3.99 3.99 0 0 1 12 2Zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 14a5 5 0 0 0 5-5c0-1.64-.8-3.09-2.05-4.01A3.99 3.99 0 0 1 12 8a3.99 3.99 0 0 1-2.95 1.99A5.002 5.002 0 0 0 12 18Z"/></svg>
     ),
-    desc: "Un développement moderne, maintenable et évolutif grâce aux technologies les plus récentes."
+    desc: "Collaboration, communication et adaptation dans des environnements agiles et multiculturels."
   },
   {
-    name: "Accompagnement sur-mesure",
+    name: "Curiosité & veille",
     icon: (
       <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><path fill="#fbbf24" d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4Zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4Z"/></svg>
     ),
-    desc: "Conseils, écoute et suivi personnalisé pour chaque projet, de l’idée à la mise en ligne."
+    desc: "Passion pour l’apprentissage continu et la découverte de nouvelles technologies pour rester à la pointe."
   },
 ];
 
 const navLinks = [
   { name: "Accueil", href: "#home" },
   { name: "À propos", href: "#about" },
+  { name: "Compétences", href: "#skills" },
   { name: "Réalisations", href: "#projects" },
-  { name: "Services", href: "#services" },
-  { name: "FAQ", href: "#faq" },
+
   
 ];
 
@@ -64,7 +64,7 @@ const Hero = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7.5" />
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 15v4m0 0h-4m4 0-5-5" />
           </svg>
-          Demander un devis
+          Me contacter
         </a>
         {/* Menu burger mobile */}
         <div className="md:hidden flex items-center pr-4">
@@ -126,7 +126,7 @@ const Hero = () => {
 
       {/* Titre principal en split text */}
       <h1 className="text-4xl md:text-6xl font-bold text-center max-w-3xl mt-4 flex flex-wrap justify-center leading-[1.22]">
-        {"Développeur web & créateur d’expériences digitales"
+        {"Développeur fullstack passionné, prêt à rejoindre votre équipe"
           .split(' ')
           .map((word, i) => (
             <span
@@ -146,7 +146,7 @@ const Hero = () => {
       </h1>
 
       <p className="text-gray-200 text-base text-center max-w-xl mt-3">
-        J’accompagne les entreprises et entrepreneurs dans la création de sites web modernes, performants et sur-mesure. Spécialiste React, Tailwind, et solutions sur mesure pour booster votre présence en ligne.
+        À la recherche d’un poste stimulant en développement fullstack. Je mets à profit mon expertise en front-end (React, Tailwind, TypeScript) et back-end (Node.js, Express, bases de données) pour concevoir des solutions innovantes et contribuer à vos projets.
       </p>
 
       {/* ...Barre de recherche supprimée... */}

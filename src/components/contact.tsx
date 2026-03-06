@@ -17,9 +17,9 @@ export default function Contact() {
         <div className="flex flex-col justify-center h-full">
           <h2 className="text-4xl font-bold mb-4 flex flex-col items-start">
             <img src="/logos/logo_w.svg" alt="Logo SunDev" width="120" height="48" loading="lazy" className="h-16 w-auto mb-6" />
-            Contactez-moi
+            Prendre contact
           </h2>
-          <p className="text-gray-300 mb-8">Vous avez un projet, une question ou envie d’échanger ? Remplissez le formulaire ou contactez-moi directement, je vous réponds rapidement.</p>
+          <p className="text-gray-300 mb-8">Vous êtes recruteur, manager ou porteur de projet ? Discutons d’une opportunité, d’un poste ou d’une collaboration ! Remplissez le formulaire ou contactez-moi directement, je vous réponds rapidement et avec plaisir.</p>
           <div className="space-y-6 text-base">
             <div className="flex items-start gap-3">
               <span className="text-blue-400"><svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="2"/><path d="M3 7V5a2 2 0 012-2h14a2 2 0 012 2v2"/></svg></span>

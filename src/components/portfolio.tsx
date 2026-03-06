@@ -11,26 +11,26 @@ import 'swiper/css/pagination';
 const projects = [
   {
     name: 'SunDev Vitrine',
-    description: "Site vitrine moderne pour une agence locale, design sur-mesure, responsive et SEO optimisé.",
-    stack: ['React', 'Vite', 'Tailwind'],
+    description: "Développement fullstack d’un site vitrine : React/Tailwind pour le front, Node.js pour le back, SEO et performance optimisés.",
+    stack: ['React', 'Vite', 'Tailwind', 'Node.js'],
     link: '#',
   },
   {
     name: 'E-commerce sur-mesure',
-    description: "Boutique en ligne avec gestion de catalogue, paiement sécurisé et dashboard client.",
-    stack: ['Next.js', 'Node.js', 'Stripe'],
+    description: "Création d’une boutique en ligne complète : Next.js côté client, API Node.js/Express, gestion catalogue, paiement Stripe, dashboard admin.",
+    stack: ['Next.js', 'Node.js', 'Express', 'Stripe', 'MongoDB'],
     link: '#',
   },
   {
     name: 'Blog technique',
-    description: "Blog personnel avec espace admin, publication d’articles, et intégration newsletter.",
-    stack: ['Gatsby', 'GraphQL', 'Mailchimp'],
+    description: "Blog personnel fullstack : Gatsby pour le front, API GraphQL, espace admin sécurisé, newsletter automatisée.",
+    stack: ['Gatsby', 'GraphQL', 'Mailchimp', 'Node.js'],
     link: '#',
   },
   {
     name: 'Application mobile RH',
-    description: "App mobile pour la gestion des congés et plannings, notifications push et interface intuitive.",
-    stack: ['React Native', 'Expo', 'Firebase'],
+    description: "Application mobile RH : React Native/Expo côté client, Firebase pour la gestion des données, Node.js pour les notifications et l’API.",
+    stack: ['React Native', 'Expo', 'Firebase', 'Node.js'],
     link: '#',
   },
 ];
