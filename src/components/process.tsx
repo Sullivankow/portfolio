@@ -99,9 +99,10 @@ function Process() {
     >
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-blue-400">Mes Compétences</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
+        {/* Grille responsive moderne */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {steps.map((step, idx) => (
-            <div key={idx} className="bg-gradient-to-b from-[#2A0150] to-[#090025] border border-blue-900 rounded-xl p-10 flex flex-col items-center text-center shadow-lg hover:-translate-y-1 transition duration-300 max-w-2xl w-full mx-auto">
+            <div key={idx} className="bg-gradient-to-b from-[#2A0150] to-[#090025] border border-blue-900 rounded-2xl p-8 flex flex-col items-center text-center shadow-lg hover:shadow-2xl hover:-translate-y-1 transition duration-300 w-full">
               <div className="mb-4">{step.icon}</div>
               <h3 className="text-lg font-semibold mb-2 text-white">{step.title}</h3>
               {Array.isArray(step.desc) ? (

@@ -1,10 +1,51 @@
 // Formulaire de contact SunDev, charte graphique, responsive, animation au scroll
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
+import { useState } from 'react';
 
 
 export default function Contact() {
   // Animation au scroll
   const [ref, visible] = useRevealOnScroll<HTMLElement>();
+  // États pour le message et le statut
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [message, setMessage] = useState('');
+
+  // Soumission du formulaire
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('idle');
+    setMessage('');
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const data: Record<string, string> = {};
+    formData.forEach((value, key) => {
+      if (value instanceof File) {
+        // Ignorer ou traiter séparément les fichiers
+        return;
+      }
+      data[key] = typeof value === 'string' ? value : String(value);
+    });
+    try {
+      const res = await fetch('/send_mail.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json();
+      if (json.ok) {
+        setStatus('success');
+        setMessage('Votre message a bien été envoyé. Merci !');
+        form.reset();
+      } else {
+        setStatus('error');
+        setMessage(json.error || (json.errors ? json.errors.join(' ') : 'Erreur lors de l\'envoi.'));
+      }
+    } catch (err) {
+      console.error('Erreur lors de l\'envoi du formulaire:', err);
+      setStatus('error');
+      setMessage('Erreur lors de l\'envoi.');
+    }
+  };
 
   return (
     <section
@@ -29,11 +70,10 @@ export default function Contact() {
               <span className="text-blue-400"><svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M22 16.92V19a2 2 0 01-2.18 2A19.86 19.86 0 013 5.18 2 2 0 015 3h2.09a2 2 0 012 1.72c.13 1.13.37 2.24.72 3.32a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006.6 6.6l1.27-1.27a2 2 0 012.11-.45c1.08.35 2.19.59 3.32.72A2 2 0 0121 16.91z"/></svg></span>
               <span>06 50 52 76 17</span> {/* À personnaliser */}
             </div>
-            
           </div>
         </div>
         {/* Bloc droit : formulaire */}
-        <form className="flex flex-col gap-6 justify-center h-full">
+        <form className="flex flex-col gap-6 justify-center h-full" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <label htmlFor="firstName" className="block text-sm font-semibold mb-2">Prénom</label>
@@ -57,6 +97,9 @@ export default function Contact() {
             <textarea id="message" name="message" rows={4} className="w-full rounded-md bg-[#101828] text-white px-4 py-3 border border-white/10 focus:border-blue-400 focus:ring-2 focus:ring-blue-400 outline-none resize-none" />
           </div>
           <button type="submit" className="self-end sm:self-end self-center mx-auto bg-blue-500 text-white rounded-md px-6 py-3 font-semibold hover:bg-blue-400 transition-colors duration-200">Envoyer le message</button>
+          {status !== 'idle' && (
+            <div className={`mt-4 text-center text-lg font-semibold ${status === 'success' ? 'text-green-400' : 'text-red-400'}`}>{message}</div>
+          )}
         </form>
       </div>
     </section>
