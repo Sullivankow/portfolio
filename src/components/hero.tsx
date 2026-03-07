@@ -106,7 +106,7 @@ const Hero = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7.5" />
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 15v4m0 0h-4m4 0-5-5" />
           </svg>
-          <span className="truncate">Demander un devis</span>
+          <span className="truncate">Me Contacter</span>
         </a>
       </div>
       {/* Overlay pour fermer en cliquant à côté */}
@@ -121,7 +121,7 @@ const Hero = () => {
         <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-lg">
           <path d="M21.5 2L7 22h10l-1.5 14L31 16h-10l1.5-14z" fill="#38bdf8" stroke="#fff" strokeWidth="2"/>
         </svg>
-        <span className="text-xs text-blue-200 mt-1 tracking-wide uppercase font-semibold">Boostez votre présence en ligne</span>
+        <span className="text-xs text-blue-200 mt-1 tracking-wide uppercase font-semibold">Votre futur collaborateur, passionné et motivé</span>
       </div>
 
       {/* Titre principal en split text */}

@@ -1,5 +1,5 @@
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
-
+import { projects } from '../models/projectsMock';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -7,99 +7,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 
-// Tableau des projets à présenter dans le portfolio
-const projects = [
-    
-   {
-    name: 'Koosy',
-    description: "Interface intuitive, authentification, gestion des rôles, sécurité, gestion CRUD via API RESTful, conception de bases de données.",
-    stack: ['React Native', 'Expo', 'NestJS', 'MVC', 'API RESTful', 'PostgreSQL', 'Sécurité', 'Authentification', 'Front', 'Back'],
-    link: '#',
-    image: '/images/koosy.png',
-    github: '#',
-  },
-  {
-    name: 'Site Vitrine AutoZen',
-    description: "Développement fullstack d’un site vitrine, SEO et performance optimisés.",
-    stack: ['React', 'Tailwind', 'Node.js', 'Vite', 'SEO', 'Github Actions'],
-    link: '#',
-    image: '/images/autozen.png',
-    github: '#',
-  },
-  {
-    name: 'Les Clés de l’Atlantique 17',
-    description: "Interface responsive, formulaire de contact, bonnes pratiques UI, gestion Kanban, référencement naturel, déploiement continu et maintenance.",
-    stack: ['PHP Vanilla', 'Bootstrap', 'Kanban', 'DevOps', 'Github Actions', 'UI', 'SEO'],
-    link: '#',
-    image: '/images/lcdl.PNG',
-    github: '#',
-  },
-  {
-    name: 'Grassy Photographie',
-    description: "Site vitrine responsive, formulaire de contact sécurisé, référencement SEO, déploiement continu, gestion de projet, Gitflow, Trello, Kanban.",
-    stack: ['React', 'Vite', 'Tailwind', 'PHP', 'SEO', 'Github Actions', 'Gitflow', 'Trello', 'Kanban', 'UI', 'Sécurité'],
-    link: '#',
-    image: '/images/grassy.png',
-    github: '#',
-  },
-  {
-      name: 'Øverst - Site Vitrine',
-      description: "Site vitrine pour l'artiste Øverst, design moderne, responsive, galerie et présentation des œuvres.",
-      stack: ['React', 'TypeScript', 'Vite', 'Tailwind'],
-      link: '#',
-      image: '/images/overst.png',
-      github: '#',
-  },
-     {
-        name: 'E-commerce Complet',
-        description: "Site e-commerce complet : front moderne avec React, Vite et TypeScript, back-end PHP Symfony, API RESTful, gestion catalogue, panier, paiement et espace admin.",
-        stack: ['React', 'Vite', 'TypeScript', 'PHP', 'Symfony', 'API RESTful'],
-        link: '#',
-        image: '/images/ecom.png',
-        github: '#',
-  },
-        {
-        name: 'Digital Opus - Site Vitrine',
-        description: "Site vitrine pour Digital Opus, interface responsive, design moderne, formulaire de contact et bonnes pratiques UI.",
-        stack: ['PHP Vanilla', 'Bootstrap', 'CSS'],
-        link: '#',
-        image: '/images/opus.png',
-        github: '#',
-      },
 
-  {
-    name: 'Zoo Arcadia',
-    description: "API RESTful sécurisée, authentification, gestion des rôles utilisateurs, bases de données SQL et NoSQL, conteneurisation Docker, CI/CD, gestion de projet.",
-    stack: ['Symfony', 'API RESTful', 'SQL', 'NoSQL', 'Docker', 'CI/CD', 'Kanban', 'Gitflow', 'Sécurité', 'Authentification'],
-    link: '#',
-    image: '/images/arcadia.PNG',
-    github: '#',
-  },
-    {
-      name: 'CvUp',
-      description: "Générateur de CV en ligne, interface moderne et responsive, création et export de CV personnalisés.",
-      stack: ['React', 'TypeScript', 'DaisyUI', 'HTML', 'CSS'],
-      link: '#',
-      image: '/images/cvup.PNG',
-      github: '#',
-  },
-     {
-      name: 'Laety Nails',
-      description: "Site vitrine pour salon de manucure, interface moderne, responsive et gestion de prise de rendez-vous.",
-      stack: ['React', 'Vite', 'Tailwind', 'TypeScript'],
-      link: '#',
-      image: '/images/laety.jpg',
-      github: '#',
-  },
-       {
-        name: 'Restaurant Quai Antique',
-        description: "Site complet pour le restaurant Quai Antique : interface vitrine, gestion des menus, réservations, back-end PHP Symfony, API RESTful CRUD.",
-        stack: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Symfony', 'API RESTful', 'CRUD'],
-        link: '#',
-        image: '/images/qa.png',
-        github: '#',
-      },
-];
+
+
+
 
 // Composant principal Portfolio
 export default function Portfolio() {
@@ -162,7 +73,7 @@ export default function Portfolio() {
                     <span key={tech} className="bg-blue-400/20 text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">{tech}</span>
                   ))}
                 </div>
-                {/* Lien vers le projet */}
+                {/* Liens vers le projet et GitHub */}
                 <div className="mt-auto flex items-center justify-center gap-3">
                   <a
                     href={project.link}
@@ -172,6 +83,20 @@ export default function Portfolio() {
                   >
                     Voir plus
                   </a>
+                  {project.link && project.link !== '#' && project.link !== project.github && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 transition-colors duration-200"
+                      aria-label="Lien vers le site"
+                    >
+                      {/* Icône lien externe blanche */}
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 3h7m0 0v7m0-7L10 14m-4 4h7a2 2 0 002-2v-7" />
+                      </svg>
+                    </a>
+                  )}
                   {project.github && (
                     <a
                       href={project.github}

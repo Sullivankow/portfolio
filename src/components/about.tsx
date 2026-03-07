@@ -56,7 +56,7 @@ function About() {
             <div className="lg:max-w-lg">
               <h2 className="text-base font-semibold text-blue-400 tracking-wide uppercase">À propos de SunDev</h2>
               <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-                Développeur fullstack polyvalent & motivé
+                Développeur fullstack
               </p>
               <p className="mt-6 text-lg text-gray-200">
                 Diplômé Bac +2, passionné par le développement web et les technologies innovantes, j’ai acquis une solide expérience en accompagnant des clients sur des projets variés (vitrine, e-commerce, applications métier). Ma maîtrise du front-end (React, Tailwind, TypeScript) et du back-end (Node.js, Express, bases de données) me permet de concevoir des solutions complètes, performantes et sécurisées.<br/><br/>
@@ -91,7 +91,7 @@ function About() {
             Me contacter
           </a>
           <a
-            href="/CV_DEV_SullivanKowalski.pdf"
+            href="/images/CV_DEV_SullivanKowalski.pdf"
             download
             className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-white font-semibold py-3 px-8 rounded-full shadow-xl transition-all duration-200 text-lg group ml-4 focus:outline-none
             sm:py-3 sm:px-8 sm:text-lg
