@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 140">
+  <style>
+    .ring {
+      stroke: #000;
+      stroke-width: 6;
+      fill: none;
+      animation: rotate 4s linear infinite;
+      transform-origin: center;
+    }
+    .bracket {
+      stroke: #000;
+      stroke-width: 6;
+      fill: none;
+      stroke-linecap: round;
+      opacity: 0.8;
+      animation: float 2.8s ease-in-out infinite;
+    }
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+      100% { transform: translateY(0px); }
+    }
+    .text1 {
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 46px;
+      fill: #000;
+    }
+    .text2 {
+      font-family: Arial, sans-serif;
+      font-weight: 300;
+      font-size: 46px;
+      fill: #000;
+    }
+  </style>
+
+  <!-- Icon -->
+  <g transform="translate(70,70)">
+    <circle class="ring" cx="0" cy="0" r="26"/>
+    <path class="bracket" d="M -44 -20 L -60 0 L -44 20"/>
+    <path class="bracket" d="M 44 -20 L 60 0 L 44 20"/>
+  </g>
+
+  <!-- Static clean text (no overlap) -->
+  <text x="150" y="82" class="text1">Sun</text>
+  <text x="245" y="82" class="text2">Dev</text>
+</svg>
